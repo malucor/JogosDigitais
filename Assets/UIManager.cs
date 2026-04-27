@@ -9,6 +9,9 @@ public class UIManager : MonoBehaviour
     [Header("Pause")]
     [SerializeField] private GameObject pauseScreen;
 
+    [Header("Win")]
+    [SerializeField] private GameObject victoryScreen;
+
     private void Awake()
     {
         gameOverScreen.SetActive(false);
@@ -67,4 +70,10 @@ public class UIManager : MonoBehaviour
             Time.timeScale = 1;
     }
     #endregion
+
+    public void ShowVictory()
+    {
+        victoryScreen.SetActive(true);
+        Time.timeScale = 0;
+    }
 }
